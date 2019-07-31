@@ -235,8 +235,8 @@ endif()
 # Use bitcode or not
 if (NOT DEFINED ENABLE_BITCODE AND NOT IOS_ARCH MATCHES "((^|, )(i386|x86_64))+")
   # Unless specified, enable bitcode support by default
-  set(ENABLE_BITCODE TRUE CACHE BOOL "Whether or not to enable bitcode")
-  message(STATUS "Enabling bitcode support by default. ENABLE_BITCODE not provided!")
+  set(ENABLE_BITCODE FALSE CACHE BOOL "Whether or not to enable bitcode")
+  message(STATUS "Disable bitcode support by default. ENABLE_BITCODE not provided!")
 endif()
 if (NOT DEFINED ENABLE_BITCODE)
   message(STATUS "Disabling bitcode support by default on simulators. ENABLE_BITCODE not provided for override!")
